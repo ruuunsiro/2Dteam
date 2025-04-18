@@ -3,20 +3,21 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 10f; // ジャンプ力
-    public Sprite[] walkSprites; // 足踏みスプライト2枚
-    public Sprite idleSprite;    // 止まってるときのスプライト
+    public float jumpForce = 10f;
+    public float lowJumpMultiplier = 2f;
+    public float fallMultiplier = 3f;
+
+    public Sprite[] walkSprites;
+    public Sprite idleSprite;
 
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
     private Vector3 defaultScale;
 
-    private bool isGrounded; // 地面にいるかどうか
     private float animationTimer;
     private int currentWalkIndex;
 
-    public Transform groundCheck; // 地面チェック用
-    public LayerMask groundLayer; // 地面判定のレイヤーマスク
+    private bool isGrounded = false;
 
     void Start()
     {
@@ -27,45 +28,70 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // 地面チェック（床との接触確認）
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
-
         // 横移動
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
         // 向きの反転
         if (moveInput > 0)
-        {
             transform.localScale = new Vector3(Mathf.Abs(defaultScale.x), defaultScale.y, defaultScale.z);
-        }
         else if (moveInput < 0)
-        {
             transform.localScale = new Vector3(-Mathf.Abs(defaultScale.x), defaultScale.y, defaultScale.z);
-        }
 
         // ジャンプ処理
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space)) // スペースキーでジャンプ
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+
+        // リアルなジャンプ補正
+        if (rb.linearVelocity.y < 0)
+        {
+            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
+        {
+            rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
         // アニメーション処理
-        if (Mathf.Abs(moveInput) > 0.01f && isGrounded)
+        if (Mathf.Abs(moveInput) > 0.01f)
         {
             animationTimer += Time.deltaTime;
-            if (animationTimer >= 0.2f) // アニメ切り替えの速度（秒）
+            if (animationTimer >= 0.2f)
             {
                 animationTimer = 0f;
                 currentWalkIndex = (currentWalkIndex + 1) % walkSprites.Length;
                 spriteRenderer.sprite = walkSprites[currentWalkIndex];
             }
         }
-        else if (isGrounded)
+        else
         {
             spriteRenderer.sprite = idleSprite;
             animationTimer = 0f;
             currentWalkIndex = 0;
         }
+    }
+
+    // ← ここからは Update() の外！
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
+    }
+
+    public void DecreaseJumpForce(float amount)
+    {
+        jumpForce = Mathf.Max(0f, jumpForce - amount);
     }
 }
