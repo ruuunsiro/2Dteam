@@ -5,3 +5,4 @@
 .vsconfig
 .sln
 .csproj
+/obj
