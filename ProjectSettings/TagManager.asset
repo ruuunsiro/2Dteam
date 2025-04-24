@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - bLoCk
+  - Item
+  - RespawnPoint
+  - comeback
   layers:
   - Default
   - TransparentFX

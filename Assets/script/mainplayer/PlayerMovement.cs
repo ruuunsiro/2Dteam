@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // 横移動
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
@@ -38,23 +37,25 @@ public class PlayerMovement : MonoBehaviour
         else if (moveInput < 0)
             transform.localScale = new Vector3(-Mathf.Abs(defaultScale.x), defaultScale.y, defaultScale.z);
 
-        // ジャンプ処理
+        // ジャンプ（1回押し）
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
-        // リアルなジャンプ補正
+        // ジャンプ慣性：ふんわり or 加速落下
         if (rb.linearVelocity.y < 0)
         {
+            // 落下時：落下加速
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
         else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
         {
+            // 上昇中にスペースを離したらふわっと
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 
-        // アニメーション処理
+        // 歩きアニメーション
         if (Mathf.Abs(moveInput) > 0.01f)
         {
             animationTimer += Time.deltaTime;
@@ -73,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // ← ここからは Update() の外！
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -91,7 +91,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
             isGrounded = true;
     }
-
 
     public void DecreaseJumpForce(float amount)
     {
