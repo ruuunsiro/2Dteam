@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float airControlFactor = 0.5f; // 空中での操作影響度
     public float jumpForce = 10f;
     public float lowJumpMultiplier = 2f;
     public float fallMultiplier = 3f;
@@ -29,7 +30,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float moveInput = Input.GetAxisRaw("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+
+        // ジャンプ慣性：地上と空中で移動の影響を変える
+        float currentMoveSpeed = isGrounded ? moveSpeed : moveSpeed * airControlFactor;
+
+        // 横移動（rb.velocity に直接代入せず、X方向だけ変更）
+        rb.linearVelocity = new Vector2(moveInput * currentMoveSpeed, rb.linearVelocity.y);
 
         // 向きの反転
         if (moveInput > 0)
@@ -40,18 +46,17 @@ public class PlayerMovement : MonoBehaviour
         // ジャンプ（1回押し）
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0); // ジャンプ前にY速度リセット
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
         // ジャンプ慣性：ふんわり or 加速落下
         if (rb.linearVelocity.y < 0)
         {
-            // 落下時：落下加速
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
         else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
         {
-            // 上昇中にスペースを離したらふわっと
             rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
 

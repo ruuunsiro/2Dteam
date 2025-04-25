@@ -8,13 +8,16 @@ public class PlayerRespawn : MonoBehaviour
     public TMP_Text respawnCountText; // リスポーン回数表示用（TMP）
     public GameObject respawnUI; // 黒背景（親オブジェクト）
 
+    public GameObject canvasObject;
+
     private Rigidbody2D rb;
-    private int respawnCount = 0; // リスポーン回数
+    private static int respawnCount = 0; // リスポーン回数
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         respawnUI.SetActive(false); // 開始時は非表示
+        canvasObject.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,7 +56,7 @@ public class PlayerRespawn : MonoBehaviour
         // 黒背景とテキスト表示
         respawnUI.SetActive(true);
         respawnCountText.gameObject.SetActive(true);
-        respawnCountText.text = "ー" + respawnCount.ToString();
+        respawnCountText.text = "-" + respawnCount.ToString();
 
         // 1秒後に非表示
         Invoke("HideRespawnUI", 1f);
@@ -69,4 +72,5 @@ public class PlayerRespawn : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 }
