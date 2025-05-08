@@ -1,19 +1,13 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class PipeWarpToSelect : MonoBehaviour
+public class DestroyFloor : MonoBehaviour
 {
-    private bool isWarping = false;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (!isWarping && other.CompareTag("Pipe"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            isWarping = true;
-            FadeCenter.Instance.FadeOutToCenter(() =>
-            {
-                SceneManager.LoadScene("StageSelect");
-            });
+            // 0.1秒後にこの床オブジェクトを破壊
+            Destroy(gameObject, 0.1f);
         }
     }
 }

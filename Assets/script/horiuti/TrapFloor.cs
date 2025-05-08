@@ -2,48 +2,32 @@ using UnityEngine;
 
 public class TrapFloor : MonoBehaviour
 {
-    public float moveDistance = 5f;    // 落ちる距離
-    public float moveSpeed = 10f;       // 落ちる速さ
+    public float fallSpeed = 50f;         // 床が落ちる速度
+    public float destroyDelay = 0.5f;     // プレイヤー接触から何秒後に削除するか
 
-    private bool isMoving = false;
-    private Vector3 startPos;
-    private Vector3 targetPos;
+    private bool hasTriggered = false;    // 一度でも触れたかどうか
+    private bool shouldFall = false;
 
-    void Start()
+    void OnCollisionEnter(Collision collision)
     {
-        startPos = transform.position;
-        targetPos = startPos + Vector3.down * moveDistance;
+        if (!hasTriggered && collision.gameObject.CompareTag("Player"))
+        {
+            hasTriggered = true;
+            shouldFall = true;
+            Invoke(nameof(DestroyFloor), destroyDelay);
+        }
     }
 
     void Update()
     {
-        if (isMoving)
+        if (shouldFall)
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-
-            if (transform.position == targetPos)
-            {
-                isMoving = false;
-            }
+            transform.position += Vector3.down * fallSpeed * Time.deltaTime;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void DestroyFloor()
     {
-        if (other.CompareTag("Player"))
-        {
-            isMoving = true;
-        }
+        Destroy(gameObject);
     }
-
-    // 3Dの時はこっちを使ってね
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isMoving = true;
-        }
-    }
-    */
 }
