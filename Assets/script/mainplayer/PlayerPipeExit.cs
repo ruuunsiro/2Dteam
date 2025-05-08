@@ -1,9 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerPipeExit : MonoBehaviour
 {
-    public float exitDuration = 1.5f;     // �t�F�[�h�A�E�g�ƈړ��ɂ����鍇�v���ԁi�b�j
-    public float exitSpeed = 2f;          // �ړ����x�i���b�j
+    public float exitDuration = 1.5f;
+    public float exitSpeed = 2f;
+    public string nextSceneName = "StageSelect"; // 遷移先のシーン名
+    public Image fadePanel; // 画面全体のフェード用パネル
 
     private bool isExiting = false;
     private float exitTimer = 0f;
@@ -17,6 +22,11 @@ public class PlayerPipeExit : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerCollider = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
+
+        // 初期設定でパネルの透明度を0にしておく
+        Color color = fadePanel.color;
+        color.a = 0f;
+        fadePanel.color = color;
     }
 
     void Update()
@@ -26,17 +36,22 @@ public class PlayerPipeExit : MonoBehaviour
             exitTimer += Time.deltaTime;
             float t = Mathf.Clamp01(exitTimer / exitDuration);
 
-            // ���X�ɉE�ֈړ�
+            // 右へ移動
             transform.position += Vector3.right * exitSpeed * Time.deltaTime;
 
-            // �t�F�[�h�A�E�g�i�A���t�@�����X��0�ցj
+            // 徐々に透明に
             float alpha = Mathf.Lerp(1f, 0f, t);
             spriteRenderer.color = new Color(1f, 1f, 1f, alpha);
 
-            // �w�莞�Ԃ��߂������\����
+            // フェードアウトのためのパネル
+            Color panelColor = fadePanel.color;
+            panelColor.a = Mathf.Lerp(0f, 1f, t);  // アルファ値を0から1に変化させる
+            fadePanel.color = panelColor;
+
+            // 時間が来たらシーン遷移
             if (exitTimer >= exitDuration)
             {
-                gameObject.SetActive(false);
+                StartCoroutine(FadeToScene());
             }
         }
     }
@@ -47,7 +62,6 @@ public class PlayerPipeExit : MonoBehaviour
         {
             isExiting = true;
 
-            // �Փ˖������������~
             if (rb != null)
             {
                 rb.linearVelocity = Vector2.zero;
@@ -58,7 +72,7 @@ public class PlayerPipeExit : MonoBehaviour
             if (playerCollider != null)
                 playerCollider.enabled = false;
 
-            // ���̃v���C���[�X�N���v�g���~�i�����ȊO�j
+            // スクリプトを無効にする処理
             MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
             foreach (var script in scripts)
             {
@@ -66,5 +80,12 @@ public class PlayerPipeExit : MonoBehaviour
                     script.enabled = false;
             }
         }
+    }
+
+    private IEnumerator FadeToScene()
+    {
+        // フェード後にシーン遷移
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene(nextSceneName);
     }
 }

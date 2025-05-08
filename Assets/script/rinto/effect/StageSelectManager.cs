@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class StageSelectManager : MonoBehaviour
 {
@@ -8,14 +10,18 @@ public class StageSelectManager : MonoBehaviour
     private int currentIndex = 0;
     private bool isMoving = false;
 
-    public CameraShake cameraShake; // ← カメラ揺れを呼び出す
-    public float shakeDuration = 0.5f;
-    public float shakeMagnitude = 0.2f;
+    public CanvasGroup fadePanel; // ← 黒フェード用
+    public float fadeDuration = 1f;
     public float delayBeforeLoad = 0.6f;
 
     private void Start()
     {
         transform.position = stagePoints[currentIndex].position;
+        if (fadePanel != null)
+        {
+            fadePanel.alpha = 0f;
+            fadePanel.blocksRaycasts = false;
+        }
     }
 
     private void Update()
@@ -24,7 +30,7 @@ public class StageSelectManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.D)) MoveToIndex(currentIndex + 1);
             else if (Input.GetKeyDown(KeyCode.A)) MoveToIndex(currentIndex - 1);
-            else if (Input.GetKeyDown(KeyCode.Space)) StartCoroutine(ShakeAndLoad());
+            else if (Input.GetKeyDown(KeyCode.Space)) StartCoroutine(FadeAndLoad());
             else if (Input.GetMouseButtonDown(0))
             {
                 Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -59,10 +65,20 @@ public class StageSelectManager : MonoBehaviour
         }
     }
 
-    System.Collections.IEnumerator ShakeAndLoad()
+    IEnumerator FadeAndLoad()
     {
-        if (cameraShake != null)
-            cameraShake.TriggerShake(shakeDuration, shakeMagnitude);
+        if (fadePanel != null)
+        {
+            fadePanel.blocksRaycasts = true;
+            float timer = 0f;
+
+            while (timer < fadeDuration)
+            {
+                timer += Time.deltaTime;
+                fadePanel.alpha = Mathf.Clamp01(timer / fadeDuration);
+                yield return null;
+            }
+        }
 
         yield return new WaitForSeconds(delayBeforeLoad);
 
