@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: a8d0e8f1ed5c49b47b1db6bf51becc82
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 828780739562287212
+    second: ikasumi_0
+  - first:
+      213: 5582687991078882120
+    second: ikasumi_1
+  - first:
+      213: -3263457520714396159
+    second: ikasumi_2
+  - first:
+      213: 7537125561374889042
+    second: ikasumi_3
+  - first:
+      213: -6771930480662435179
+    second: ikasumi_4
+  - first:
+      213: -2695271900228421438
+    second: ikasumi_5
+  - first:
+      213: -973474399046722187
+    second: ikasumi_6
+  - first:
+      213: 6274301476622167071
+    second: ikasumi_7
+  - first:
+      213: -3665417886904300030
+    second: ikasumi_8
+  - first:
+      213: 1937153754440982787
+    second: ikasumi_9
+  - first:
+      213: 1659855633631606106
+    second: ikasumi_10
+  - first:
+      213: 3254154948646197853
+    second: ikasumi_11
+  - first:
+      213: 5342115262799471821
+    second: ikasumi_12
+  - first:
+      213: 6114190479520882635
+    second: ikasumi_13
+  - first:
+      213: 3832965453792874697
+    second: ikasumi_14
+  - first:
+      213: -1748728568808098894
+    second: ikasumi_15
+  - first:
+      213: 1229542008141052589
+    second: ikasumi_16
+  - first:
+      213: 739438416611157249
+    second: ikasumi_17
+  - first:
+      213: -453145890856675053
+    second: ikasumi_18
+  - first:
+      213: -4349464477457183904
+    second: ikasumi_19
+  - first:
+      213: -6396770137615156888
+    second: ikasumi_20
+  - first:
+      213: -3338161515126390482
+    second: ikasumi_21
+  - first:
+      213: -843211087413755623
+    second: ikasumi_22
+  - first:
+      213: 8128469027609282848
+    second: ikasumi_23
+  - first:
+      213: 6737323870696741830
+    second: ikasumi_24
+  - first:
+      213: 2673448591925101622
+    second: ikasumi_25
+  - first:
+      213: -7931835762622323738
+    second: ikasumi_26
+  - first:
+      213: -2842286493282498904
+    second: ikasumi_27
+  - first:
+      213: -9113825864920947744
+    second: ikasumi_28
+  - first:
+      213: 2957686812493336058
+    second: ikasumi_29
+  - first:
+      213: 4878737806332046490
+    second: ikasumi_30
+  - first:
+      213: 7999695235906564594
+    second: ikasumi_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ikasumi_0
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 733
+        width: 37
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60bb4a01bb608b00800000000000000
+      internalID: 828780739562287212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_1
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 683
+        width: 48
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b88184621b97d40800000000000000
+      internalID: 5582687991078882120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_2
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 705
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ecd3aecaed5b2d0800000000000000
+      internalID: -3263457520714396159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_3
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 657
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2545441c3cf399860800000000000000
+      internalID: 7537125561374889042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_4
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 680
+        width: 49
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59aa9786b154502a0800000000000000
+      internalID: -6771930480662435179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_5
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 681
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8fac5ac78789ad0800000000000000
+      internalID: -2695271900228421438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_6
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 617
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d12e611368d72f0800000000000000
+      internalID: -973474399046722187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 608
+        width: 11
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ce5c743fbc21750800000000000000
+      internalID: 6274301476622167071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_8
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 651
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ec4b12ad1d12dc0800000000000000
+      internalID: -3665417886904300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_9
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 620
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301e4c0831722ea10800000000000000
+      internalID: 1937153754440982787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_10
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 631
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55fa0d87edf80710800000000000000
+      internalID: 1659855633631606106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_11
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 626
+        width: 20
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ad22e3fa4192d20800000000000000
+      internalID: 3254154948646197853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_12
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 608
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4ea5c1781032a40800000000000000
+      internalID: 5342115262799471821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_13
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 561
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfdae4c8d7f9d450800000000000000
+      internalID: 6114190479520882635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_14
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 579
+        width: 12
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c01ba5b5cd613530800000000000000
+      internalID: 3832965453792874697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_15
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 556
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3bd9fb1a44bb7e0800000000000000
+      internalID: -1748728568808098894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_16
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 583
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daafaa721f5301110800000000000000
+      internalID: 1229542008141052589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_17
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 575
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105a26b7253034a00800000000000000
+      internalID: 739438416611157249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_18
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 109
+        width: 665
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3195f00963a16b9f0800000000000000
+      internalID: -453145890856675053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 566
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b0cf92a1993a3c0800000000000000
+      internalID: -4349464477457183904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_20
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 260
+        width: 22
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8693f9d837b1a37a0800000000000000
+      internalID: -6396770137615156888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_21
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 150
+        width: 24
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e210300d9c77ca1d0800000000000000
+      internalID: -3338161515126390482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_22
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 205
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9114808cbff4c44f0800000000000000
+      internalID: -843211087413755623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_23
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 187
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0298a6e938f1ec070800000000000000
+      internalID: 8128469027609282848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_24
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 188
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb93a15d58cf7d50800000000000000
+      internalID: 6737323870696741830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_25
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 183
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 634c6fe645ff91520800000000000000
+      internalID: 2673448591925101622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_26
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 149
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3282806657ce190800000000000000
+      internalID: -7931835762622323738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_27
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 179
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a681025e7b2e88d0800000000000000
+      internalID: -2842286493282498904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_28
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 152
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e3ae98b9af258180800000000000000
+      internalID: -9113825864920947744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_29
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 146
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afdc5874c70db0920800000000000000
+      internalID: 2957686812493336058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_30
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 139
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ca0baaf22c4b340800000000000000
+      internalID: 4878737806332046490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ikasumi_31
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 125
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1789fce60a40f60800000000000000
+      internalID: 7999695235906564594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ikasumi_0: 828780739562287212
+      ikasumi_1: 5582687991078882120
+      ikasumi_10: 1659855633631606106
+      ikasumi_11: 3254154948646197853
+      ikasumi_12: 5342115262799471821
+      ikasumi_13: 6114190479520882635
+      ikasumi_14: 3832965453792874697
+      ikasumi_15: -1748728568808098894
+      ikasumi_16: 1229542008141052589
+      ikasumi_17: 739438416611157249
+      ikasumi_18: -453145890856675053
+      ikasumi_19: -4349464477457183904
+      ikasumi_2: -3263457520714396159
+      ikasumi_20: -6396770137615156888
+      ikasumi_21: -3338161515126390482
+      ikasumi_22: -843211087413755623
+      ikasumi_23: 8128469027609282848
+      ikasumi_24: 6737323870696741830
+      ikasumi_25: 2673448591925101622
+      ikasumi_26: -7931835762622323738
+      ikasumi_27: -2842286493282498904
+      ikasumi_28: -9113825864920947744
+      ikasumi_29: 2957686812493336058
+      ikasumi_3: 7537125561374889042
+      ikasumi_30: 4878737806332046490
+      ikasumi_31: 7999695235906564594
+      ikasumi_4: -6771930480662435179
+      ikasumi_5: -2695271900228421438
+      ikasumi_6: -973474399046722187
+      ikasumi_7: 6274301476622167071
+      ikasumi_8: -3665417886904300030
+      ikasumi_9: 1937153754440982787
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,6 +10,7 @@ TagManager:
   - RespawnPoint
   - comeback
   - Pipe
+  - Obstacle
   layers:
   - Default
   - TransparentFX

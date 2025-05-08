@@ -9,12 +9,14 @@ public class PlayerSpaceMovement : MonoBehaviour
     public float maxSpeed = 5f;
 
     private Rigidbody2D rb;
+    private Vector3 originalScale;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
         rb.linearDamping = 0.1f;
+        originalScale = transform.localScale;
     }
 
     private void Update()
@@ -34,6 +36,16 @@ public class PlayerSpaceMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * upwardForce);
+        }
+
+        // 左右入力に応じて反転
+        if (moveInput > 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+        }
+        else if (moveInput < 0)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
         }
     }
 }
