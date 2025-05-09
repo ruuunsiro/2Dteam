@@ -363,8 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54866be5996703645ba28bdfe0776e80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 40
-  moveSpeed: 40
+  fallSpeed: 50
+  destroyDelay: 0.5
 --- !u!50 &390792374
 Rigidbody2D:
   serializedVersion: 5
@@ -2644,5 +2644,5 @@ SceneRoots:
   - {fileID: 1913370094}
   - {fileID: 2021600781}
   - {fileID: 1801698834}
-  - {fileID: 1224059412}
   - {fileID: 2068229723}
+  - {fileID: 1224059412}
