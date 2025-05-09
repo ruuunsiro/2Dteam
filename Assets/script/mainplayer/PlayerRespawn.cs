@@ -33,11 +33,14 @@ public class PlayerRespawn : MonoBehaviour
         }
     }
 
-    void Respawn()
+    public void Respawn()
     {
         if (currentRespawnPoint != null)
         {
             respawnCount++;
+
+            // プレイヤーを非アクティブ化（1秒間に複数カウントされるのを防ぐ）
+            gameObject.SetActive(false);
 
             // UI表示の流れ
             ShowRespawnUI();
@@ -50,6 +53,7 @@ public class PlayerRespawn : MonoBehaviour
             Debug.LogWarning("リスポーン地点が設定されていません！");
         }
     }
+
 
     void ShowRespawnUI()
     {

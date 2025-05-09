@@ -7,6 +7,7 @@ public class PlayerSpaceMovement : MonoBehaviour
     public float upwardForce = 1.2f;      // 上昇推進力（スペースキー）
     public float downwardDrift = -0.5f;   // 自然に下がる力（宇宙での緩やかな沈下）
     public float maxSpeed = 5f;
+    public float bounceForce = 3f;        // ぶつかったときのはじき力
 
     private Rigidbody2D rb;
     private Vector3 originalScale;
@@ -46,6 +47,16 @@ public class PlayerSpaceMovement : MonoBehaviour
         else if (moveInput < 0)
         {
             transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("SpaceBlock"))
+        {
+            // 衝突点の法線方向にはじく
+            Vector2 normal = collision.contacts[0].normal;
+            rb.AddForce(normal * bounceForce, ForceMode2D.Impulse);
         }
     }
 }

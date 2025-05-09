@@ -11,6 +11,9 @@ TagManager:
   - comeback
   - Pipe
   - Obstacle
+  - SpaceBlock
+  - MergeEnemy
+  - Wall
   layers:
   - Default
   - TransparentFX
