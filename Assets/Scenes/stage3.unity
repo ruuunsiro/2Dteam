@@ -786,8 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b385423caae737409f18274c193e582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 1.6
-  upwardForce: 0.25
+  moveForce: 1.53
+  upwardForce: 0.23
   downwardDrift: -0.07
   maxSpeed: 1
   bounceForce: 3
